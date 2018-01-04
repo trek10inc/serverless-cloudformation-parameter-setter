@@ -2,7 +2,7 @@
 
 const deployWithParameters = require('./lib/deployWithParameters')
 
-class ServerlessCloudFormationParameters {
+class ServerlessCloudFormationParameterSetter {
   constructor (serverless, options) {
     try {
       this.serverless = serverless
@@ -24,4 +24,4 @@ class ServerlessCloudFormationParameters {
   }
 }
 
-module.exports = ServerlessCloudFormationParameters
+module.exports = ServerlessCloudFormationParameterSetter

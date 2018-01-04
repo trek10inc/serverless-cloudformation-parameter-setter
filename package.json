@@ -1,20 +1,15 @@
 {
   "author": "Trek10, Inc",
   "bugs": {
-    "url": "https://github.com/trek10inc/serverless-cloudformation-parameters/issues"
+    "url": "https://github.com/trek10inc/serverless-cloudformation-parameter-setter/issues"
   },
   "dependencies": {},
   "description": "A serverless plugin for creating setting CloudFormation Parameters",
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "eslint": "^4.13.1",
-    "mocha": "^4.0.1",
-    "sinon": "^4.1.3"
-  },
+  "devDependencies": {},
   "engines": {
     "node": ">=6.0"
   },
-  "homepage": "https://github.com/trek10inc/serverless-cloudformation-parameters",
+  "homepage": "https://github.com/trek10inc/serverless-cloudformation-parameter-setter",
   "keywords": [
     "serverless",
     "serverless plugin",
@@ -24,13 +19,11 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "name": "serverless-cloudformation-parameters",
+  "name": "serverless-cloudformation-parameter-setter",
   "repository": {
     "type": "git",
-    "url": "https://github.com/trek10inc/serverless-cloudformation-parameters"
+    "url": "https://github.com/trek10inc/serverless-cloudformation-parameter-setter"
   },
-  "scripts": {
-    "test": "./node_modules/.bin/mocha . ./lib"
-  },
+  "scripts": {},
   "version": "0.0.1"
 }

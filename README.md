@@ -1,4 +1,4 @@
-# serverless-cloudformation-changesets
+# serverless-cloudformation-parameter-setter
 [![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
 
 Serverless framework plugin to set CloudFormation Parameters when deploying
@@ -8,14 +8,14 @@ Serverless framework plugin to set CloudFormation Parameters when deploying
 Install the plugin from npm
 
 ```bash
-$ npm install --save serverless-cloudformation-parameters
+$ npm install --save serverless-cloudformation-parameter-setter
 ```
 
 Add the plugin to your `serverless.yml` file:
 
 ```yaml
 plugins:
-  - serverless-cloudformation-parameters
+  - serverless-cloudformation-parameter-setter
 ```
 
 ## Usage
