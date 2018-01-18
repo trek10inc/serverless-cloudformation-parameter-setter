@@ -25,7 +25,7 @@ None
 #### YAML settings
 ```yaml
 custom:
-  cfParameters:
+  cf-parameters:
     secretPassword: whatever # this could be serverless ssm variable or s3 variable or plaintext or whatever, do what you want
 
 resources:
