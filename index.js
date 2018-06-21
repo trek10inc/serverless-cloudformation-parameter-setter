@@ -1,7 +1,6 @@
 'use strict'
 
 const deployWithParameters = require('./lib/deployWithParameters')
-
 class ServerlessCloudFormationParameterSetter {
   constructor (serverless, options) {
     try {
@@ -11,8 +10,11 @@ class ServerlessCloudFormationParameterSetter {
       let awsDeploy = serverless.pluginManager.plugins.find(p => p.constructor.name === 'AwsDeploy')
       awsDeploy.options.cfParameters = serverless.service && serverless.service.custom && serverless.service.custom['cf-parameters']
       awsDeploy.createParameters = deployWithParameters.createParameters
-      awsDeploy.createFallback = Function(awsDeploy.createFallback.toString().replace('Parameters: [],', 'Parameters: this.createParameters(this.options.cfParameters, this.serverless.service.provider.compiledCloudFormationTemplate, false),').slice(18,-1))
-      awsDeploy.update = Function(
+      awsDeploy.createFallback = () => (
+      	awsDeploy.createFallback.toString()
+      	  .replace('Parameters: [],', 'Parameters: this.createParameters(this.options.cfParameters, this.serverless.service.provider.compiledCloudFormationTemplate, false),')
+      	  .slice(18,-1))
+      awsDeploy.update = () => (
         awsDeploy.update.toString()
           .replace('Parameters: [],', 'Parameters: this.createParameters(this.options.cfParameters, this.serverless.service.provider.compiledCloudFormationTemplate, true),')
           .replace('NO_UPDATE_MESSAGE', '"No updates are to be performed."')
